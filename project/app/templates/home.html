@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="color: blue;">if Tag</h1>
+        {% if name %}
+        <h3>hello {{name}}</h3>
+        {% endif %}
+
+        {% if city %}
+        <h3>hello {{city}}</h3>
+        {% endif %}
+
+        {% if language %}
+        <h3>language {{language}}</h3>
+        {% endif %}
+    
+
+<!--=========================================================================  -->
+        <h1 style="color: brown;">if-else condition </h1>
+        {% if name == "c++" %}
+        <h3>hello {{name}}</h3>
+        {% else %}
+        <h3>invalid credential</h3>
+        {% endif %}
+ 
+<!--========================================  -->
+        <h1>nested if else condition</h1>
+        {% if name %}
+        <h3>hello {{name}}</h3>
+        {% elif city %}
+        <h3>hello {{city}}</h3>
+        {% else %}
+        <h3>condition not satisfied</h3>
+        {% endif %}
+
+<!-- ============================================ -->
+        <h1>if tag (for loop)</h1>
+        {% if name == "himanshi" %}
+        <h2>{{languag}}</h2>
+            {% for i in language %}
+                <h3>{{i}}</h3>
+            {% endfor %}
+        {% endif %}  
+        
+        <h3 style="color: rgb(221, 33, 45);">if tag (for loop counter)</h3>
+        <h2>{{languag}}</h2>
+            {% for i in language %}
+                <h3>{{forloop.counter}}.{{i}}</h3>
+            {% endfor %}
+
+<!--==================================================  -->
+        <h1>if tag (for loop with counter0)</h1>
+        {% if name == "himanshi" %}
+        <h2>{{languag}}</h2>
+            {% for i in language %}
+                <h3>{{forloop.counter0}}.{{i}}</h3>
+            {% endfor %}
+        {% endif %}
+
+<!--==================================================  -->
+        <h1>if tag (for loop with last)</h1>
+        {% if name == "himanshi" %}
+        <h2>{{languag}}</h2>
+            {% for i in language %}
+               <h3>{{forloop.last}}.{{i}}</h3>
+            {% endfor %}
+        {% endif %}
+
+<!--====================================================  -->
+        <h1>if tag (for loop with first)</h1>
+        {% if name == "himanshi" %}
+            <h2>{{languag}}</h2>
+            {% for i in language %}
+               <h3>{{forloop.first}}.{{i}}</h3>
+            {% endfor %}
+        {% endif %}
+
+<!-- ===================================================== -->
+        <h1>if tag (for loop with revcounter)</h1>
+        {% if name == "himanshi" %}
+            <h2>{{languag}}</h2>
+            {% for i in language %}
+               <h3>{{forloop.revcounter}}.{{i}}</h3>
+            {% endfor %}
+        {% endif %}
+
+<!-- ============================================= -->
+        <h1>if tag (for loop with revcounter0)</h1>
+        {% if name == "himanshi" %}
+            <h2>{{languag}}</h2>
+            {% for i in language %}
+               <h3>{{forloop.revcounter0}}.{{i}}</h3>
+            {% endfor %}
+        {% endif %}
+         
+    </center>
+</body>
+</html>
